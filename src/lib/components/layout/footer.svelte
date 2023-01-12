@@ -34,14 +34,12 @@
             </ul>
         </div>
         <div class="col-md-3 w3_footer_grid">
-            <h3>twitter posts</h3>
+            <h3>Address</h3>
             <ul class="w3_footer_grid_list1">
-                <li><label class="fa fa-twitter" aria-hidden="true"></label><i>01 day ago</i><span>Non numquam <a href="/">http://sd.ds/13jklf#</a>
-                    eius modi tempora incidunt ut labore et
-                    <a href="#">http://sd.ds/1389kjklf#</a>quo nulla.</span></li>
-                <li><label class="fa fa-twitter" aria-hidden="true"></label><i>02 day ago</i><span>Con numquam <a href="/">http://fd.uf/56hfg#</a>
-                    eius modi tempora incidunt ut labore et
-                    <a href="/">http://fd.uf/56hfg#</a>quo nulla.</span></li>
+                <li><label class="fa fa-twitter" aria-hidden="true"></label><i>Cơ sở 1: </i><span><a href="/">Quận 1</a>
+                    ..........</li>
+                <li><label class="fa fa-twitter" aria-hidden="true"></label><i>Cơ sở 2: </i><span><a href="/">Quận Thủ Đức</a>
+                    ..........</li>
             </ul>
         </div>
         <div class="clearfix"> </div>

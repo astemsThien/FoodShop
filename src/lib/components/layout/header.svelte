@@ -4,7 +4,7 @@
 
 <div class="agileits_header">
     <div class="w3l_offers">
-        <a href="products.html">Today's special Offers !</a>
+        <a href="/product">Today's special Offers !</a>
     </div>
     <div class="w3l_search">
         <form action="#" method="post">
@@ -24,20 +24,20 @@
     <div class="w3l_header_right">
         <ul>
             <li class="dropdown profile_details_drop">
-                <a href="/" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i><span class="caret"></span></a>
-                <div class="mega-dropdown-menu">
+                <a href="/login" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i><span class="caret"></span></a>	
+                <div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
                     <div class="w3ls_vegetables">
-                        <ul class="dropdown-menu drp-mnu">
+                        <ul>	
                             <li><a href="/login">Login</a></li> 
                             <li><a href="/signup">Sign Up</a></li>
                         </ul>
                     </div>                  
-                </div>	
+                </div>		
             </li>
         </ul>
     </div>
     <div class="w3l_header_right1">
-        <h2><a href="/contact">Contact Us</a></h2>
+        <h2><a href="/contactt">Contact</a></h2>
     </div>
     <div class="clearfix"> </div>
 </div>
@@ -48,10 +48,10 @@
         </div>
         <div class="w3ls_logo_products_left1">
             <ul class="special_items">
-                <li><a href="/event">Events</a><i>/</i></li>
+                <li><a href="/eventt">Events</a><i>/</i></li>
                 <li><a href="/about">About</a><i>/</i></li>
                 <li><a href="/product">Products</a><i>/</i></li>
-                <li><a href="/services">Services</a></li>
+                <li><a href="/servicse">Services</a></li>
             </ul>
         </div>
         <div class="w3ls_logo_products_left1">
