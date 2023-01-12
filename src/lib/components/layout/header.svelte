@@ -17,22 +17,14 @@
             <fieldset>
                 <input type="hidden" name="cmd" value="_cart" />
                 <input type="hidden" name="display" value="1" />
-                <input type="submit" name="submit" value="View your cart" class="button" />
+                <a href="/checkout"><input type="submit" name="submit" value="View your cart" class="button" /></a>
             </fieldset>
         </form>
     </div>
     <div class="w3l_header_right">
         <ul>
             <li class="dropdown profile_details_drop">
-                <a href="/login" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i><span class="caret"></span></a>	
-                <div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
-                    <div class="w3ls_vegetables">
-                        <ul>	
-                            <li><a href="/login">Login</a></li> 
-                            <li><a href="/signup">Sign Up</a></li>
-                        </ul>
-                    </div>                  
-                </div>		
+                <a href="/login" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i></a>	
             </li>
         </ul>
     </div>
