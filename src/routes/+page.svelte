@@ -193,8 +193,8 @@
                                     <h4>{product.price} đ<span>{product.prices} đ</span></h4>
                                 </div>
                                 <div class="snipcart-details">
-                                    <button class="clickbtn"><a href="/product">Xem thêm</a></button>
-                                        <style>
+                                    <button class="clickbtn"><a href="/product" style="color: whitesmoke;">Xem thêm</a></button>
+                                        <style> 
                                             .clickbtn{
                                                 width: 150px; font-size: 22px; color: pink; background-color: red; border: 1px solid red; border-radius: 5px;
                                             }
