@@ -93,6 +93,7 @@
                 {#await authPromise}
                 Loading...
                 {:then _} 
+                {#if !userObject}
                 <h2>Login to your account</h2>
                 <form action="#" method="post">
                 <input type="text" name="Username" placeholder="Username" required bind:value={username}>
@@ -111,6 +112,9 @@
                     }
                 </style>
                 </form>
+                {:else}
+                <button style="position: absolute; top:-464px; right:-210px; background-color: #212121; border: 1px black; color: #ffffff" on:click={Close}>Hi, {userObject.username}!</button>
+                {/if}
                 {/await}
             </div>
             

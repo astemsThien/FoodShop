@@ -1,11 +1,6 @@
 <script>
     import { cart} from '$lib/components/config/cart.js';
     
-    // let userObject = null;
-    // const userBase = window.userbase;
-    // let authPromise = userBase.init({appId: '7e03f771-442d-4523-b503-10b2d582c494'})
-    //     .then(({user}) => userObject = user)
-
 </script>
 
 <div class="agileits_header">
@@ -30,11 +25,6 @@
     <div class="w3l_header_right">
         <ul>
             <li class="dropdown profile_details_drop">
-                <!-- {#await authPromise}
-                Loading...
-                {:then _} 
-                <a href="/login" class="dropdown-toggle" data-toggle="dropdown">Hi, {userObject.username}!<i class="fa fa-user" aria-hidden="true"></i></a>	
-                {/await} -->
                 <a href="/login" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i></a>	
 
             </li>
