@@ -1,5 +1,13 @@
 <script>
+    let userObject = null;
+    const userBase = window.userbase;
+    let authPromise = userBase.init({appId: '7e03f771-442d-4523-b503-10b2d582c494'})
+        .then(({user}) => userObject = user)
 
+    let username, password;
+
+    const signIn = () => authPromise = userBase.signIn({username, password}).then(user => userObject = user);
+    const Close = () => authPromise = userBase.signOut().then(() => userObject = null);
 </script>
 
 <!-- products-breadcrumb -->
@@ -16,16 +24,16 @@
 <div class="banner">
     <div class="w3l_banner_nav_left">
         <nav class="navbar nav_bottom">
-         <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header nav_2">
-              <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header nav_2">
+            <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-              </button>
-           </div> 
-           <!-- Collect the nav links, forms, and other content for toggling -->
+            </button>
+        </div> 
+        <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                 <ul class="nav navbar-nav nav_1">
                     <li><a href="/fruit">Fruits</a></li>
@@ -81,13 +89,31 @@
                 <div class="tooltip">Click Me</div>
             </div>
             <div class="form">
+                {#await authPromise}
+                Loading...
+                {:then _} 
                 <h2>Login to your account</h2>
                 <form action="#" method="post">
-                <input type="text" name="Username" placeholder="Username" required>
-                <input type="password" name="Password" placeholder="Password" required>
-                <input type="submit" value="Login">
+                <input type="text" name="Username" placeholder="Username" required bind:value={username}>
+                <input type="password" name="Password" placeholder="Password" required bind:value={password}>
+                <button class="signin" on:click={signIn} type="button">Login</button>
+                <style>
+                    .signin{
+                        width: 100%;
+                        background-color: #84c639; 
+                        border: 1px solid #84c639;
+                        font-size: 25px;
+                        color: #ffffff;
+                    }
+                    .signin:hover{
+                        background-color: #fa1818; 
+                    }
+                </style>
                 </form>
+                {/await}
             </div>
+            
+    
             <div class="form">
                 <h2>Create an account</h2>
                 <form action="#" method="post">
@@ -119,30 +145,6 @@
     </div>
     <div class="clearfix"></div>
 </div>
-<!-- //banner -->
-<!-- newsletter-top-serv-btm -->
-<!-- <div class="newsletter-top-serv-btm">
-    <div class="container" style="display: flex; justify-content: center; align-items: center;">
-        <div class="col-md-5 wthree_news_top_serv_btm_grid">
-            <div class="wthree_news_top_serv_btm_grid_icon">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-            </div>
-            <h3>Nam libero tempore</h3>
-            <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus 
-                saepe eveniet ut et voluptates repudiandae sint et.</p>
-        </div>
-        <div class="col-md-5 wthree_news_top_serv_btm_grid">
-            <div class="wthree_news_top_serv_btm_grid_icon">
-                <i class="fa fa-truck" aria-hidden="true"></i>
-            </div>
-            <h3>eveniet ut et voluptates</h3>
-            <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus 
-                saepe eveniet ut et voluptates repudiandae sint et.</p>
-        </div>
-        <div class="clearfix"> </div>
-    </div>
-</div> -->
-<!-- //newsletter-top-serv-btm -->
 <!-- newsletter -->
 <div class="newsletter">
     <div class="container">
