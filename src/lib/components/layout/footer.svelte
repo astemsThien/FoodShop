@@ -65,7 +65,7 @@
             <div class="clearfix"> </div>
         </div>
         <div class="wthree_footer_copy">
-            <p>© 2023 Farm Food. All rights reserved | Design by <a href="/">Group nghèo</a></p>
+            <p>© 2023 Farm Food. All rights reserved | Design by <a href="/">ASTEMS</a></p>
         </div>
     </div>
 </div>

@@ -16,17 +16,17 @@
     import tag from '../images/tag.png'
     import offer from '../images/offer.png'
 
-    import {card, cart} from '$lib/components/config/card.js';
+    import {card, cast} from '$lib/components/config/card.js';
 
     const addToCart = (product) => {
-        for(let item of $cart) {
+        for(let item of $cast) {
                 if(item.id === product.id) {
                     product.quantity += 1
-                    $cart = $cart;
+                    $cast = $cast;
                     return;
                 }
         }
-        $cart = [...$cart, product]
+        $cast = [...$cast, product]
     }
 
 </script>
@@ -193,11 +193,15 @@
                                     <h4>{product.price} đ<span>{product.prices} đ</span></h4>
                                 </div>
                                 <div class="snipcart-details">
-                                    <form action="#" method="post">
-                                        <fieldset>
-                                            <input type="submit" name="submit" value="Add to cart" class="button" on:click={() => addToCart(product)}/>
-                                        </fieldset>
-                                    </form>
+                                    <button class="clickbtn"><a href="/product">Xem thêm</a></button>
+                                        <style>
+                                            .clickbtn{
+                                                width: 150px; font-size: 22px; color: pink; background-color: red; border: 1px solid red; border-radius: 5px;
+                                            }
+                                            .clickbtn:hover{
+                                                color: pink; background-color: green;border: 1px solid green;
+                                            }
+                                        </style>
                                 </div>
                             </div>
                         </figure>

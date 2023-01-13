@@ -93,12 +93,12 @@
             <div class="col-md-8 agileinfo_mail_grid_right">
                 <form action="#" method="post">
                     <div class="col-md-6 wthree_contact_left_grid">
-                        <input type="text" name="Name" placeholder="Name*">
-                        <input type="email" name="Email" placeholder="Email*">
+                        <input type="text" name="Name" placeholder="Name*" required>
+                        <input type="email" name="Email" placeholder="Email*" required>
                     </div>
                     <div class="col-md-6 wthree_contact_left_grid">
-                        <input type="text" name="Telephone" placeholder="Telephone*" >
-                        <input type="text" name="Subject" placeholder="Subject*">
+                        <input type="text" name="Telephone" placeholder="Telephone*" required>
+                        <input type="text" name="Subject" placeholder="Subject*" required>
                     </div>
                     <div class="clearfix"> </div>
                     <textarea  name="Message" >Message...</textarea>

@@ -1,9 +1,8 @@
 <script>
-    import img1 from '../../images/10.png'
-    import tag from '../../images/tag.png'
     import offer from '../../images/offer.png'
 
     import {products, cart} from '$lib/components/config/cart.js';
+    // import {fruits} from '$lib/components/config/card.js'
 
     const addToCart = (product) => {
         for(let item of $cart) {
@@ -23,7 +22,7 @@
     <div class="container">
         <ul>
             <li><i class="fa fa-home" aria-hidden="true"></i><a href="/">Home</a><span>|</span></li>
-            <li>Branded Foods</li>
+            <li>Products</li>
         </ul>
     </div>
 </div>
@@ -113,11 +112,15 @@
                                         <h4>{product.price} đ<span>{product.prices} đ</span></h4>
                                     </div>
                                     <div class="snipcart-details">
-                                        <form action="#" method="post">
-                                            <fieldset>
-                                                <input type="submit" name="submit" value="Add to cart" class="button" on:click={() => addToCart(product)}/>
-                                            </fieldset>
-                                        </form>
+                                        <button class="clickbtn" on:click={() => addToCart(product)}><i class="fa fa-shopping-cart"></i></button>
+                                        <style>
+                                            .clickbtn{
+                                                width: 150px; font-size: 22px; color: pink; background-color: red; border: 1px solid red; border-radius: 5px;
+                                            }
+                                            .clickbtn:hover{
+                                                color: pink; background-color: green;border: 1px solid green;
+                                            }
+                                        </style>
                                     </div>
                                 </div>
                             </figure>
@@ -126,6 +129,43 @@
                     </div>
                 </div>
                 {/each}
+                <div class="clearfix"> </div>
+
+                <!-- <h6>Fruits</h6>
+                {#each $fruits as product}
+                <div class="col-md-3 w3ls_w3l_banner_left" style="padding: 15px;">
+                    <div class="hover14 column">
+                    <div class="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
+                        <div class="agile_top_brand_left_grid_pos">
+                            <img src={offer} alt=" " class="img-responsive" />
+                        </div>
+                        <div class="agile_top_brand_left_grid1">
+                            <figure>
+                                <div class="snipcart-item block">
+                                    <div class="snipcart-thumb">
+                                        <a href="single.html"><img src={product.image} alt=" " class="img-responsive" /></a>
+                                        <h4>{product.name}</h4>
+                                        <p>{product.content}</p>
+                                        <h4>{product.price} đ<span>{product.prices} đ</span></h4>
+                                    </div>
+                                    <div class="snipcart-details">
+                                        <button class="clickbtn" on:click={() => addToCart(product)}><i class="fa fa-shopping-cart"></i></button>
+                                        <style>
+                                            .clickbtn{
+                                                width: 150px; font-size: 22px; color: pink; background-color: red; border: 1px solid red; border-radius: 5px;
+                                            }
+                                            .clickbtn:hover{
+                                                color: pink; background-color: green;border: 1px solid green;
+                                            }
+                                        </style>
+                                    </div>
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                {/each} -->
                 <div class="clearfix"> </div>
             </div>
         </div>

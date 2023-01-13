@@ -1,10 +1,8 @@
 <script>
-    import img1 from '../../images/10.png'
     import tag from '../../images/tag.png'
     import offer from '../../images/offer.png'
 
-    import {fruits, cart} from '$lib/components/config/card.js';
-  import { products } from '$lib/components/config/cart';
+    import {fruits, cart} from '$lib/components/config/cart.js';
 
     const addToCart = (product) => {
         for(let item of $cart) {
@@ -24,7 +22,7 @@
     <div class="container">
         <ul>
             <li><i class="fa fa-home" aria-hidden="true"></i><a href="/">Home</a><span>|</span></li>
-            <li>Branded Foods</li>
+            <li>Fruits</li>
         </ul>
     </div>
 </div>
@@ -96,8 +94,8 @@
         <div class="w3ls_w3l_banner_nav_right_grid">
             <h3 style="padding: 15px 15px 0 15px;">Product</h3>
             <div class="w3ls_w3l_banner_nav_right_grid1">
-                <h6>All products</h6>
-                {#each $products as product}
+                <h6>Fruits</h6>
+                {#each $fruits as product}
                 <div class="col-md-3 w3ls_w3l_banner_left" style="padding: 15px;">
                     <div class="hover14 column">
                     <div class="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
@@ -114,11 +112,15 @@
                                         <h4>{product.price} đ<span>{product.prices} đ</span></h4>
                                     </div>
                                     <div class="snipcart-details">
-                                        <form action="#" method="post">
-                                            <fieldset>
-                                                <input type="submit" name="submit" value="Add to cart" class="button" on:click={() => addToCart(product)}/>
-                                            </fieldset>
-                                        </form>
+                                        <button class="clickbtn" on:click={() => addToCart(product)}><i class="fa fa-shopping-cart"></i></button>
+                                        <style>
+                                            .clickbtn{
+                                                width: 150px; font-size: 22px; color: pink; background-color: red; border: 1px solid red; border-radius: 5px;
+                                            }
+                                            .clickbtn:hover{
+                                                color: pink; background-color: green;border: 1px solid green;
+                                            }
+                                        </style>
                                     </div>
                                 </div>
                             </figure>

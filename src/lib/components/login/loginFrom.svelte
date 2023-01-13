@@ -121,7 +121,7 @@
 </div>
 <!-- //banner -->
 <!-- newsletter-top-serv-btm -->
-<div class="newsletter-top-serv-btm">
+<!-- <div class="newsletter-top-serv-btm">
     <div class="container" style="display: flex; justify-content: center; align-items: center;">
         <div class="col-md-5 wthree_news_top_serv_btm_grid">
             <div class="wthree_news_top_serv_btm_grid_icon">
@@ -141,7 +141,7 @@
         </div>
         <div class="clearfix"> </div>
     </div>
-</div>
+</div> -->
 <!-- //newsletter-top-serv-btm -->
 <!-- newsletter -->
 <div class="newsletter">

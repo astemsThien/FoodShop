@@ -1,5 +1,6 @@
 <script>
-
+    import { cart} from '$lib/components/config/cart.js';
+    // import { fruits} from '$lib/components/config/card.js';
 </script>
 
 <div class="agileits_header">
@@ -17,7 +18,7 @@
             <fieldset>
                 <input type="hidden" name="cmd" value="_cart" />
                 <input type="hidden" name="display" value="1" />
-                <a href="/checkout"><input type="submit" name="submit" value="View your cart" class="button" /></a>
+                <a href="/checkout"><input type="submit" name="submit" value="view your cart       ({$cart.length})" class="button"/></a>
             </fieldset>
         </form>
     </div>
@@ -49,7 +50,7 @@
         <div class="w3ls_logo_products_left1">
             <ul class="phone_email">
                 <li><i class="fa fa-phone" aria-hidden="true"></i>(+0123) 234 567</li>
-                <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:store@grocery.com">store@grocery.com</a></li>
+                <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:store@grocery.com">store@astems.co.kr</a></li>
             </ul>
         </div>
         <div class="clearfix"> </div>

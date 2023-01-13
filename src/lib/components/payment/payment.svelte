@@ -87,28 +87,28 @@
                         <div class="row">
                     <div class="col-md-6">
                         <img class="pp-img" src={pay} alt="Image Alternative text" title="Image Title">
-                        <p>Important: You will be redirected to PayPal's website to securely complete your payment.</p><a class="btn btn-primary">Checkout via Paypal</a>	
+                        <p>Important: You will be redirected to PayPal's website to securely complete your payment.</p><a class="btn btn-primary" href="https://www.paypal.com/vn/signin">Checkout via Paypal</a>	
                     </div>
                     <div class="col-md-6">
                         <form class="cc-form">
                             <div class="clearfix">
                                 <div class="form-group form-group-cc-number">
                                     <label>Card Number</label>
-                                    <input class="form-control" placeholder="xxxx xxxx xxxx xxxx" type="text"><span class="cc-card-icon"></span>
+                                    <input class="form-control" placeholder="xxxx xxxx xxxx xxxx" type="text" required><span class="cc-card-icon"></span>
                                 </div>
                                 <div class="form-group form-group-cc-cvc">
                                     <label>CVV</label>
-                                    <input class="form-control" placeholder="xxxx" type="text">
+                                    <input class="form-control" placeholder="xxxx" type="text" required>
                                 </div>
                             </div>
                             <div class="clearfix">
                                 <div class="form-group form-group-cc-name">
                                     <label>Card Holder Name</label>
-                                    <input class="form-control" type="text">
+                                    <input class="form-control" type="text" required>
                                 </div>
                                 <div class="form-group form-group-cc-date">
                                     <label>Valid Thru</label>
-                                    <input class="form-control" placeholder="mm/yy" type="text">
+                                    <input class="form-control" placeholder="mm/yy" type="text" required>
                                 </div>
                             </div>
                             <div class="checkbox checkbox-small">
