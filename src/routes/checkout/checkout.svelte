@@ -151,8 +151,6 @@
             </tbody>
             {/if}
             {/each}
-            <!-- Fruits -->
-            
         </table>
         </div>
         
@@ -161,7 +159,7 @@
                 <h4>Continue to basket</h4>
                 <ul>
                     {#each $cart as product }
-                    {#if product.id = 1}
+                    {#if product.quantity > 0}
                     <li>{product.name} <i> - </i> <span>{product.price * product.quantity} đ</span></li>
                     {/if}
                     {/each}
