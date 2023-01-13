@@ -2,7 +2,12 @@
     import tag from '../../images/tag.png'
     import offer from '../../images/offer.png'
 
+<<<<<<< HEAD
     import {fruits, cart} from '$lib/components/config/cart.js';
+=======
+    import {fruits, cart} from '$lib/components/config/card.js';
+//   import { products } from '$lib/components/config/cart';
+>>>>>>> 2570ead9bbba4745e030b92ccf1d06354fe14b82
 
     const addToCart = (product) => {
         for(let item of $cart) {
@@ -94,7 +99,11 @@
         <div class="w3ls_w3l_banner_nav_right_grid">
             <h3 style="padding: 15px 15px 0 15px;">Product</h3>
             <div class="w3ls_w3l_banner_nav_right_grid1">
+<<<<<<< HEAD
                 <h6>Fruits</h6>
+=======
+                <h6>All products</h6>
+>>>>>>> 2570ead9bbba4745e030b92ccf1d06354fe14b82
                 {#each $fruits as product}
                 <div class="col-md-3 w3ls_w3l_banner_left" style="padding: 15px;">
                     <div class="hover14 column">
