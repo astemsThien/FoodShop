@@ -44,28 +44,28 @@
            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                 <ul class="nav navbar-nav nav_1">
-                    <li><a href="products.html">Branded Foods</a></li>
-                    <li><a href="household.html">Households</a></li>
+                    <li><a href="/fruit">Fruits</a></li>
+                    <li><a href="/">Households</a></li>
                     <li class="dropdown mega-dropdown active">
                         <a href="/" class="dropdown-toggle" data-toggle="dropdown">Veggies & Fruits<span class="caret"></span></a>				
                         <div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
                             <div class="w3ls_vegetables">
                                 <ul>	
-                                    <li><a href="vegetables.html">Vegetables</a></li>
-                                    <li><a href="vegetables.html">Fruits</a></li>
+                                    <li><a href="/">Vegetables</a></li>
+                                    <li><a href="/">Fruits</a></li>
                                 </ul>
                             </div>                  
                         </div>				
                     </li>
-                    <li><a href="kitchen.html">Kitchen</a></li>
-                    <li><a href="short-codes.html">Short Codes</a></li>
+                    <li><a href="/">Kitchen</a></li>
+                    <li><a href="/">Short Codes</a></li>
                     <li class="dropdown">
                         <a href="/" class="dropdown-toggle" data-toggle="dropdown">Beverages<span class="caret"></span></a>
                         <div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
                             <div class="w3ls_vegetables">
                                 <ul>
-                                    <li><a href="drinks.html">Soft Drinks</a></li>
-                                    <li><a href="drinks.html">Juices</a></li>
+                                    <li><a href="/">Soft Drinks</a></li>
+                                    <li><a href="/">Juices</a></li>
                                 </ul>
                             </div>                  
                         </div>	
@@ -76,13 +76,13 @@
                         <div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
                             <div class="w3ls_vegetables">
                                 <ul>
-                                    <li><a href="frozen.html">Frozen Snacks</a></li>
-                                    <li><a href="frozen.html">Frozen Nonveg</a></li>
+                                    <li><a href="/">Frozen Snacks</a></li>
+                                    <li><a href="/">Frozen Nonveg</a></li>
                                 </ul>
                             </div>                  
                         </div>	
                     </li>
-                    <li><a href="bread.html">Bread & Bakery</a></li>
+                    <li><a href="/">Bread & Bakery</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -93,11 +93,11 @@
         </div>
         
         <div class="w3ls_w3l_banner_nav_right_grid">
-            <h3>Product</h3>
+            <h3 style="padding: 15px 15px 0 15px;">Product</h3>
             <div class="w3ls_w3l_banner_nav_right_grid1">
-                <h6>food</h6>
+                <h6>All products</h6>
                 {#each $products as product}
-                <div class="col-md-3 w3ls_w3l_banner_left">
+                <div class="col-md-3 w3ls_w3l_banner_left" style="padding: 15px;">
                     <div class="hover14 column">
                     <div class="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
                         <div class="agile_top_brand_left_grid_pos">

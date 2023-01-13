@@ -11,32 +11,12 @@
     import img8 from '../images/8.jpg'
     import img9 from '../images/9.jpg'
     import img11 from '../images/11.jpg'
-    // png images
-    import img01 from '../images/1.png'
-    import img02 from '../images/2.png'
-    import img03 from '../images/3.png'
-    import img04 from '../images/4.png'
-    import img05 from '../images/5.png'
-    import img06 from '../images/6.png'
-    import img07 from '../images/7.png'
-    import img08 from '../images/8.png'
-    import img09 from '../images/9.png'
-    import img010 from '../images/10.png'
-    import img011 from '../images/11.png'
-    import img012 from '../images/12.png'
-    import img013 from '../images/13.png'
-    import img014 from '../images/14.png'
-    import img015 from '../images/15.png'
-    import img016 from '../images/15.png'
-    import img017 from '../images/17.png'
-    import img018 from '../images/18.png'
-    import img019 from '../images/19.png'
-    import img020 from '../images/20.png'
+
 
     import tag from '../images/tag.png'
     import offer from '../images/offer.png'
 
-    import {products, cart} from '$lib/components/config/card.js';
+    import {card, cart} from '$lib/components/config/card.js';
 
     const addToCart = (product) => {
         for(let item of $cart) {
@@ -67,28 +47,28 @@
            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                 <ul class="nav navbar-nav nav_1">
-                    <li><a href="products.html">Branded Foods</a></li>
-                    <li><a href="household.html">Households</a></li>
+                    <li><a href="/fruit">Fruits</a></li>
+                    <li><a href="/">Households</a></li>
                     <li class="dropdown mega-dropdown active">
                         <a href="/" class="dropdown-toggle" data-toggle="dropdown">Veggies & Fruits<span class="caret"></span></a>				
                         <div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
                             <div class="w3ls_vegetables">
                                 <ul>	
                                     <li><a href="/">Vegetables</a></li>
-                                    <li><a href="vegetables.html">Fruits</a></li>
+                                    <li><a href="/">Fruits</a></li>
                                 </ul>
                             </div>                  
                         </div>				
                     </li>
-                    <li><a href="kitchen.html">Kitchen</a></li>
-                    <li><a href="short-codes.html">Short Codes</a></li>
+                    <li><a href="/">Kitchen</a></li>
+                    <li><a href="/">Short Codes</a></li>
                     <li class="dropdown">
                         <a href="/" class="dropdown-toggle" data-toggle="dropdown">Beverages<span class="caret"></span></a>
                         <div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
                             <div class="w3ls_vegetables">
                                 <ul>
-                                    <li><a href="drinks.html">Soft Drinks</a></li>
-                                    <li><a href="drinks.html">Juices</a></li>
+                                    <li><a href="/">Soft Drinks</a></li>
+                                    <li><a href="/">Juices</a></li>
                                 </ul>
                             </div>                  
                         </div>	
@@ -99,15 +79,15 @@
                         <div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
                             <div class="w3ls_vegetables">
                                 <ul>
-                                    <li><a href="frozen.html">Frozen Snacks</a></li>
-                                    <li><a href="frozen.html">Frozen Nonveg</a></li>
+                                    <li><a href="/">Frozen Snacks</a></li>
+                                    <li><a href="/">Frozen Nonveg</a></li>
                                 </ul>
                             </div>                  
                         </div>	
                     </li>
-                    <li><a href="bread.html">Bread & Bakery</a></li>
+                    <li><a href="/">Bread & Bakery</a></li>
                 </ul>
-             </div><!-- /.navbar-collapse -->
+            </div><!-- /.navbar-collapse -->
         </nav>
     </div>
     <div class="w3l_banner_nav_right">
@@ -196,33 +176,33 @@
     <div class="container">
         <h3>Hot Offers</h3>
         <div class="agile_top_brands_grids">
-            {#each $products as product}
-            <div class="col-md-3 top_brand_left">
+            {#each $card as product}
+            <div class="col-md-3 w3ls_w3l_banner_left" style="padding: 15px;">
                 <div class="hover14 column">
-                    <div class="agile_top_brand_left_grid">
-                        <div class="tag"><img src={tag} alt=" " class="img-responsive" /></div>
-                        <div class="agile_top_brand_left_grid1">
-                            <figure>
-                                <div class="snipcart-item block" >
-                                    <div class="snipcart-thumb">
-                                        <a href="/"><img title=" " alt=" " src={product.image} /></a>		
-                                        <h4>{product.name}</h4>
-                                        <p>{product.content}fortune sunflower oil</p>
-                                        <h4>{product.price} đ<span>{product.prices} đ</span></h4>
-                                    </div>
-                                    <div class="snipcart-details top_brand_home_details">
-                                        <form action="checkout.html" method="post">
-                                            <fieldset>
-                                                <input type="submit" name="submit" value="Add to cart" class="button" on:click={() => addToCart(product)}/>
-                                            </fieldset>
-                                                
-                                        </form>
-                                
-                                    </div>
-                                </div>
-                            </figure>
-                        </div>
+                <div class="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
+                    <div class="agile_top_brand_left_grid_pos">
+                        <img src={offer} alt=" " class="img-responsive" />
                     </div>
+                    <div class="agile_top_brand_left_grid1">
+                        <figure>
+                            <div class="snipcart-item block">
+                                <div class="snipcart-thumb">
+                                    <a href="single.html"><img src={product.image} alt=" " class="img-responsive" /></a>
+                                    <h4>{product.name}</h4>
+                                    <p>{product.content}</p>
+                                    <h4>{product.price} đ<span>{product.prices} đ</span></h4>
+                                </div>
+                                <div class="snipcart-details">
+                                    <form action="#" method="post">
+                                        <fieldset>
+                                            <input type="submit" name="submit" value="Add to cart" class="button" on:click={() => addToCart(product)}/>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
                 </div>
             </div>
             {/each}

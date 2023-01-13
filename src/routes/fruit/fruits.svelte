@@ -1,13 +1,30 @@
 <script>
+    import img1 from '../../images/10.png'
+    import tag from '../../images/tag.png'
+    import offer from '../../images/offer.png'
 
+    import {fruits, cart} from '$lib/components/config/card.js';
+  import { products } from '$lib/components/config/cart';
+
+    const addToCart = (product) => {
+        for(let item of $cart) {
+                if(item.id === product.id) {
+                    product.quantity += 1
+                    $cart = $cart;
+                    return;
+                }
+        }
+        $cart = [...$cart, product]
+    }
 </script>
+
 
 <!-- products-breadcrumb -->
 <div class="products-breadcrumb">
     <div class="container">
         <ul>
             <li><i class="fa fa-home" aria-hidden="true"></i><a href="/">Home</a><span>|</span></li>
-            <li>Sign In & Sign Up</li>
+            <li>Branded Foods</li>
         </ul>
     </div>
 </div>
@@ -72,78 +89,50 @@
         </nav>
     </div>
     <div class="w3l_banner_nav_right">
-<!-- login -->
-    <div class="w3_login">
-        <h3>Sign In & Sign Up</h3>
-        <div class="w3_login_module">
-            <div class="module form-module">
-            <div class="toggle"><i class="fa fa-times fa-pencil"></i>
-                <div class="tooltip">Click Me</div>
-            </div>
-            <div class="form">
-                <h2>Login to your account</h2>
-                <form action="#" method="post">
-                <input type="text" name="Username" placeholder="Username" required>
-                <input type="password" name="Password" placeholder="Password" required>
-                <input type="submit" value="Login">
-                </form>
-            </div>
-            <div class="form">
-                <h2>Create an account</h2>
-                <form action="#" method="post">
-                <input type="text" name="Username" placeholder="Username" required>
-                <input type="password" name="Password" placeholder="Password" required>
-                <input type="email" name="Email" placeholder="Email Address" required>
-                <input type="text" name="Phone" placeholder="Phone Number" required>
-                <input type="submit" value="Register">
-                </form>
-            </div>
-            <div class="cta"><a href="/">Forgot your password?</a></div>
+        <div class="w3l_banner_nav_right_banner3">
+            <h3>Best Deals For New Products<span class="blink_me"></span></h3>
+        </div>
+        
+        <div class="w3ls_w3l_banner_nav_right_grid">
+            <h3 style="padding: 15px 15px 0 15px;">Product</h3>
+            <div class="w3ls_w3l_banner_nav_right_grid1">
+                <h6>All products</h6>
+                {#each $products as product}
+                <div class="col-md-3 w3ls_w3l_banner_left" style="padding: 15px;">
+                    <div class="hover14 column">
+                    <div class="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
+                        <div class="agile_top_brand_left_grid_pos">
+                            <img src={offer} alt=" " class="img-responsive" />
+                        </div>
+                        <div class="agile_top_brand_left_grid1">
+                            <figure>
+                                <div class="snipcart-item block">
+                                    <div class="snipcart-thumb">
+                                        <a href="single.html"><img src={product.image} alt=" " class="img-responsive" /></a>
+                                        <h4>{product.name}</h4>
+                                        <p>{product.content}</p>
+                                        <h4>{product.price} đ<span>{product.prices} đ</span></h4>
+                                    </div>
+                                    <div class="snipcart-details">
+                                        <form action="#" method="post">
+                                            <fieldset>
+                                                <input type="submit" name="submit" value="Add to cart" class="button" on:click={() => addToCart(product)}/>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                {/each}
+                <div class="clearfix"> </div>
             </div>
         </div>
-        <script>
-            $('.toggle').click(function(){
-              // Switches the Icon
-            $(this).children('i').toggleClass('fa-pencil');
-              // Switches the forms  
-            $('.form').animate({
-                height: "toggle",
-                'padding-top': 'toggle',
-                'padding-bottom': 'toggle',
-                opacity: "toggle"
-            }, "slow");
-            });
-        </script>
-    </div>
-<!-- //login -->
     </div>
     <div class="clearfix"></div>
 </div>
-<!-- //banner -->
-<!-- newsletter-top-serv-btm -->
-<div class="newsletter-top-serv-btm">
-    <div class="container" style="display: flex; justify-content: center; align-items: center;">
-        <div class="col-md-5 wthree_news_top_serv_btm_grid">
-            <div class="wthree_news_top_serv_btm_grid_icon">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-            </div>
-            <h3>Nam libero tempore</h3>
-            <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus 
-                saepe eveniet ut et voluptates repudiandae sint et.</p>
-        </div>
-        <div class="col-md-5 wthree_news_top_serv_btm_grid">
-            <div class="wthree_news_top_serv_btm_grid_icon">
-                <i class="fa fa-truck" aria-hidden="true"></i>
-            </div>
-            <h3>eveniet ut et voluptates</h3>
-            <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus 
-                saepe eveniet ut et voluptates repudiandae sint et.</p>
-        </div>
-        <div class="clearfix"> </div>
-    </div>
-</div>
-<!-- //newsletter-top-serv-btm -->
-<!-- newsletter -->
 <div class="newsletter">
     <div class="container">
         <div class="w3agile_newsletter_left">

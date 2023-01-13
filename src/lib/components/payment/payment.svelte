@@ -16,40 +16,40 @@
 <div class="banner">
     <div class="w3l_banner_nav_left">
         <nav class="navbar nav_bottom">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header nav_2">
-                <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+         <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header nav_2">
+              <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-                </button>
-            </div> 
-            <!-- Collect the nav links, forms, and other content for toggling -->
+              </button>
+           </div> 
+           <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                 <ul class="nav navbar-nav nav_1">
-                    <li><a href="products.html">Branded Foods</a></li>
-                    <li><a href="household.html">Households</a></li>
+                    <li><a href="/fruit">Fruits</a></li>
+                    <li><a href="/">Households</a></li>
                     <li class="dropdown mega-dropdown active">
                         <a href="/" class="dropdown-toggle" data-toggle="dropdown">Veggies & Fruits<span class="caret"></span></a>				
                         <div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
                             <div class="w3ls_vegetables">
                                 <ul>	
-                                    <li><a href="vegetables.html">Vegetables</a></li>
-                                    <li><a href="vegetables.html">Fruits</a></li>
+                                    <li><a href="/">Vegetables</a></li>
+                                    <li><a href="/">Fruits</a></li>
                                 </ul>
                             </div>                  
                         </div>				
                     </li>
-                    <li><a href="kitchen.html">Kitchen</a></li>
-                    <li><a href="short-codes.html">Short Codes</a></li>
+                    <li><a href="/">Kitchen</a></li>
+                    <li><a href="/">Short Codes</a></li>
                     <li class="dropdown">
                         <a href="/" class="dropdown-toggle" data-toggle="dropdown">Beverages<span class="caret"></span></a>
                         <div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
                             <div class="w3ls_vegetables">
                                 <ul>
-                                    <li><a href="drinks.html">Soft Drinks</a></li>
-                                    <li><a href="drinks.html">Juices</a></li>
+                                    <li><a href="/">Soft Drinks</a></li>
+                                    <li><a href="/">Juices</a></li>
                                 </ul>
                             </div>                  
                         </div>	
@@ -60,15 +60,15 @@
                         <div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
                             <div class="w3ls_vegetables">
                                 <ul>
-                                    <li><a href="frozen.html">Frozen Snacks</a></li>
-                                    <li><a href="frozen.html">Frozen Nonveg</a></li>
+                                    <li><a href="/">Frozen Snacks</a></li>
+                                    <li><a href="/">Frozen Nonveg</a></li>
                                 </ul>
                             </div>                  
                         </div>	
                     </li>
-                    <li><a href="bread.html">Bread & Bakery</a></li>
+                    <li><a href="/">Bread & Bakery</a></li>
                 </ul>
-                </div><!-- /.navbar-collapse -->
+            </div><!-- /.navbar-collapse -->
         </nav>
     </div>
     <div class="w3l_banner_nav_right">
