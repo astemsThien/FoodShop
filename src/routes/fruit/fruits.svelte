@@ -4,7 +4,7 @@
     import offer from '../../images/offer.png'
 
     import {fruits, cart} from '$lib/components/config/card.js';
-  import { products } from '$lib/components/config/cart';
+//   import { products } from '$lib/components/config/cart';
 
     const addToCart = (product) => {
         for(let item of $cart) {
@@ -97,7 +97,7 @@
             <h3 style="padding: 15px 15px 0 15px;">Product</h3>
             <div class="w3ls_w3l_banner_nav_right_grid1">
                 <h6>All products</h6>
-                {#each $products as product}
+                {#each $fruits as product}
                 <div class="col-md-3 w3ls_w3l_banner_left" style="padding: 15px;">
                     <div class="hover14 column">
                     <div class="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
