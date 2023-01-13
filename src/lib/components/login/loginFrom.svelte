@@ -4,9 +4,10 @@
     let authPromise = userBase.init({appId: '7e03f771-442d-4523-b503-10b2d582c494'})
         .then(({user}) => userObject = user)
 
-    let username, password;
+    let username, password, email, phone;
 
     const signIn = () => authPromise = userBase.signIn({username, password}).then(user => userObject = user);
+    const signUp = () => authPromise = userBase.signIn({username, password, email, phone}).then(user => userObject = user);
     const Close = () => authPromise = userBase.signOut().then(() => userObject = null);
 </script>
 
@@ -115,14 +116,18 @@
             
     
             <div class="form">
+                {#await authPromise}
+                Hi cậu!...
+                {:then _} 
                 <h2>Create an account</h2>
                 <form action="#" method="post">
-                <input type="text" name="Username" placeholder="Username" required>
-                <input type="password" name="Password" placeholder="Password" required>
-                <input type="email" name="Email" placeholder="Email Address" required>
-                <input type="text" name="Phone" placeholder="Phone Number" required>
-                <input type="submit" value="Register">
+                <input type="text" name="Username" placeholder="Username" required bind:value={username}>
+                <input type="password" name="Password" placeholder="Password" required bind:value={password}> 
+                <input type="email" name="Email" placeholder="Email Address" required bind:value={email}>
+                <input type="text" name="Phone" placeholder="Phone Number" required bind:value={phone}>
+                <button class="signin" on:click={signUp} type="button">Register</button>
                 </form>
+                {/await}
             </div>
             <div class="cta"><a href="/">Forgot your password?</a></div>
             </div>
